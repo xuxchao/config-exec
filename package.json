@@ -1,0 +1,31 @@
+{
+  "name": "command-executor",
+  "version": "1.0.0",
+  "description": "Tool to execute commands based on JSON configuration",
+  "bin": {
+    "ce": "dist/main.js"
+  },
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "test": "vitest",
+    "dev": "node -r source-map-support/register ./dist/config-exec.js",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "inquirer": "^9.2.10"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/inquirer": "^9.0.5",
+    "@types/node": "^20.4.9",
+    "@vitest/coverage-v8": "^3.2.4",
+    "source-map-support": "^0.5.21",
+    "tsc": "^2.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^7.0.4",
+    "vitest": "^0.34.6"
+  },
+  "type": "module"
+}
