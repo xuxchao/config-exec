@@ -2,13 +2,16 @@ import { program } from 'commander';
 import { ConfigManager } from './configManager';
 import { CommandExecutor } from './commandExecutor';
 import inquirer from 'inquirer';
-import { CommandConfig } from './types';
+import packageJson from '../package.json';
 
 export class CLI {
   private configManager = new ConfigManager();
   private executor = new CommandExecutor();
 
   async run(): Promise<void> {
+    // 添加一下版本信息, 版本从 package.json 中获取
+    program.version(packageJson.version);
+
     program
       .command('list')
       .description('List all configured commands')

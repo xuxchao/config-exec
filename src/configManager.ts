@@ -3,7 +3,7 @@ import path from 'path';
 import { ConfigFile } from './types';
 
 const CONFIG_FILE_NAME = '.ceconfig.json';
-const CONFIG_PATH = path.join(process.env.HOME || '', CONFIG_FILE_NAME);
+const CONFIG_PATH = path.join(process.env.HOME || process.env.USERPROFILE || '', CONFIG_FILE_NAME);
 
 console.log('CONFIG_PATH', CONFIG_PATH)
 

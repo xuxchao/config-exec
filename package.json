@@ -1,9 +1,9 @@
 {
-  "name": "command-executor",
-  "version": "1.0.0",
+  "name": "xu-command-executor",
+  "version": "1.0.7",
   "description": "Tool to execute commands based on JSON configuration",
   "bin": {
-    "ce": "dist/main.js"
+    "ce": "dist/config-exec.js"
   },
   "scripts": {
     "build": "vite build",
@@ -27,5 +27,9 @@
     "vite": "^7.0.4",
     "vitest": "^0.34.6"
   },
-  "type": "module"
+  "type": "module",
+  "files": [
+    "dist",
+    "README"
+  ]
 }
